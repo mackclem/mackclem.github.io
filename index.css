@@ -5,10 +5,15 @@
     cursor: pointer;
     object-fit: cover;
     aspect-ratio: 1;
+    transition: width 2s, height 2s, background-color 2s, rotate 2s, transform 1s;
   }
   
   .picture:hover {
     filter: brightness(80%);
+    background-color: #ffcccc;
+    width: 300px;
+    height: 300px;
+    rotate: 360deg;
   }
   
   .picture-container {

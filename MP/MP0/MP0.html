@@ -1,23 +1,41 @@
 <html>
   <head>
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./MP0.css" />
   </head>
   <body>
     <div class="MP0-container">
       <h1>MP0</h1>
       <p class="intro-paragraph">
-        <b>A little about me!</b>
-        I am a design student based out of Seattle who values creativity, inclusivity, and communication. 
-        I grew up in Southern California and always had an itch to invent tools that made life easier, like
-         a contraption that allowed me to turn my lights off from my bed when I was 10. I realized UX design 
-         fit right into my interests and went directly into the Human-Centered Design & Engineering major at 
-         the University of Washington.
-         I am currently a sophomore at UW and am fortunate to be involved in design clubs, such as Design for America.  
-         I am also pursuing a minor in Dance and am part of athletics with the UW Dance Team. 
-
-          When I am not studying, designing, or dancing, I’m most likely on long hikes with my friends, at a local coffee shop, 
-          or flying home just to pet my two dogs. 
+        <h2>Overview</h2>
+        I haven't worked with html and css for a year or two so this exploration was a 
+        slow process. I first started by copying over every folder that was in MP0. I 
+        modified the colors and the font to start with. I then worked through making sub 
+        folders for my MP writeups. This crashed Visual Studio multiple times but with some 
+        help from peers and the professor, I was able to figure out what happened. I added 
+        in images to represent each section as well as captions using figcaption.
       </p>
+      <img class="picture" src="/MP/MP0/progress.png" >
+      <p class="issue">
+        <h2>Issue</h2>
+        I ran into a bug with a pop up saying it wasn't connected in the upstream. I force quit
+        Visual Studio and entered git status into the terminal. It said there was no upstream so 
+        I entered in the command it told me and it resolved itself. I think this stemmed from not 
+        saving each file and folder properly before I commit and pushed all the changes.
+      </p>
+      <p class="issue">
+        <h2>CSS</h2>
+        I wanted my pictures to spin when you hovered over them. I chose this because it felt fun and whimsical 
+        I did this by going into the index css and adding "transition: width 2s, height 2s, background-color 2s, 
+        rotate 2s, transform 1s;" into the .picture and "rotate: 360 deg;" into .picture:hover. This made the 
+        pictures spin when you hover over them. 
+      </p>
+      <img class="picture" src="/MP/MP0/gifspin.gif" >
+      <h2>Ideas and Future</h2>
+      <ul class="Ideas and Future">
+        <li>Make it easy to go to the home page from any page</li>
+        <li>Play around with different colors </li>
+        <li>Clean up formatting on extra pages </li>
+      </ul>
     </div>
   </body>
 </html>
