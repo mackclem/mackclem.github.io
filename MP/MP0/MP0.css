@@ -1,0 +1,12 @@
+html,
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(249, 229, 229);
+  color: rgb(62, 59, 59);
+}
+
+.MP0-container {
+  width: 80%;
+  margin: auto;
+  margin-top: 5rem;
+}
