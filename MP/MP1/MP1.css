@@ -1,0 +1,31 @@
+html,
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(249, 229, 229);
+  color: rgb(62, 59, 59);
+}
+
+.MP1-container {
+  width: 80%;
+  margin: auto;
+  margin-top: 5rem;
+}
+.picture {
+  width: 300px;
+  border: 1px solid rgb(253, 192, 192);
+  border-radius: 5px;
+  cursor: pointer;
+  object-fit: contain;
+  aspect-ratio: 1;
+  transition: width 2s, height 2s, background-color 2s, rotate 2s, transform 1s;
+}
+
+
+.picture-container {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 80%;
+  gap: 12px;
+}

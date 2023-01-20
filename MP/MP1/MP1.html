@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./MP1.css" />
+  </head>
+  <body>
+    <div class="MP1-container">
+      <h1>MP1</h1>
+      <p class="intro-paragraph">
+        <h2>Overview</h2>
+        The goal for this project was to have a chrome extension where you could jot down notes and 
+        have them save in the extension even if it is closed. I wanted the style to look like a note pad so I chose
+        a fun script font for the title. I took some time to figure out how to make the text boxes into
+        many seperate boxes rather than one big text block. Below is a gif of how the extension works.
+      </p>
+      <img class="picture" src="/MP/MP1/Quicknotes.gif" >
+      <p class="development">
+        <h2>Development</h2>
+        My first step in development was to figure out which one of the examples was the best to work off
+        of. I chose the simplest (hello world) so I could have a grasp of the things I would be changing.
+        I went into the HTML to figure out how to make the notepad style. Through a little help from friends
+        and some websites, I figured out how to create a block where text can be inputted. I realized a to-do 
+        list style would be more fun, and I knew I wanted to add some checkboxes for when you complete the task.
+        I got the checkbox into the extension, it wasn't in the right spot yet, but it was there. (see progress
+        picture below) Next I worked on making the text box smaller, figuring out how to format the checkboxes
+        next to the text, and making a lot of them in a row. I finally produced a notepad with the option to input 
+        text and checkoff a list.
+        Then I realized that every time I clicked out of the extension, the text would erase which kind of
+        defeats the purpose of having a notepad there in the first place. The most complicated part of all of this 
+        was figuring out how to use chrome storage to save my inputs. After a lot of searching and help from the 
+        prof, I was able to get a text box to save. I decided it was more important to have saved text than 
+        checkboxes so I revised my vision and created the final product.
+      </p>
+      <img class="picture" src="/MP/MP1/progress.png" >
+      <p class="issue">
+        <h2>Issue</h2>
+        It took me a week to figure out how to make the Save button work. I started with a baseline Medium article 
+        that used chrome.storage.sync.get to save and retrieve information. It was a start, but it wasn't retrieving
+        information from the HTML input. Through Stack Overflow I found some answers to get data into the system, however,
+        it was printing on top of my notes instead of staying where the user inputted it (image below). It was a simple fix thanks to
+        Hannah where I just editted the destination of the output. It was a challenge to get this all to work, but 
+        it was very rewarding when it did.
+      </p>
+      <img class="picture" src="/MP/MP1/text-on-top.png" >
+      <h2>Ideas and Future</h2>
+      <ul class="Ideas and Future">
+        <li>Make it possible to add/delete rows</li>
+        <li>Make it more customizable </li>
+        <li>Add saved checkboxes</li>
+      </ul>
+      <p class="kudos">
+        <h2>Kudos</h2>
+        Shout out to this Medium Article that helped me understand the basics of creating a notepad extension 
+        https://jainil-parikh.medium.com/build-your-custom-notes-chrome-extension-90ac618b345e 
+        as well as this GitHub page https://gist.github.com/IzumiSy/765cfd6dc02c79de875e 
+        Also shout out to Hannah for helping me in-person and over the discord as well as Elliana and Prerna who
+        answered my dumb questions. 
+      </p>
+    </div>
+  </body>
+</html>
