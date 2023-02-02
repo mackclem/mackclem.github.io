@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>Keybaord</title>
+    <style>
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <script>
+        var sound;
+ 
+        function preload()
+        {
+        // initialize sound
+        sound = loadSound('MP/MP2/OceanSounds.mp3');
+        }
+        
+        
+        function setup() 
+        {
+        createCanvas(200, 200);
+        
+        // display instructions
+        textAlign(CENTER);
+        fill(100);
+        noStroke();
+        text("Click to play sound", width/2, height/2);
+        }
+        
+        function draw()
+        {
+        
+        }
+        
+        function mousePressed() 
+        {
+        // trigger sound
+        sound.play();
+        
+        // change background color
+        background(random(255), random(255), random(255));
+        
+        }
+    </script>
+  </head>
+</html>
