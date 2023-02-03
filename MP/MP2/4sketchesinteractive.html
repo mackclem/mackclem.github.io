@@ -29,10 +29,11 @@
         rect(0, 0, windowWidth, windowHeight);
         stroke(150, 75, 0);
         fill(150, 75, 0);
+        translate(windowWidth/2-windowWidth/4, windowHeight/4);
         arc(80, 180, 80, 80, 2.9,0, CHORD);
         arc(480, 380, 80, 80, 3.3,0, CHORD);
         arc(580, 130, 80, 80, 3,0, CHORD);
-        arc(120, 550, 80, 80, 2.9,0, CHORD);
+        translate(-(windowWidth/2-windowWidth/4), -windowHeight/4);
         translate(mouseX-400,mouseY-300);
         arms(-11, 40, 5.5);
         arms(11, 40, -5.5);

@@ -1,6 +1,6 @@
 :root {
-    --background: black;
-    --foreground: white;
+    --background:  rgb(253, 192, 192);
+    --foreground: rgb(255, 255, 255);
   
     font-family: "Rubik", sans-serif;
   }
@@ -9,7 +9,7 @@
     margin: 0;
     padding: 1.5rem;
     background-color: var(--background);
-    color: var(--foreground);
+    color: rgb(0,0,0);
   }
   
   #gallery {
@@ -24,7 +24,7 @@
     bottom: 0;
     background-color: var(--foreground);
     text-decoration: none;
-    color: var(--background);
+    color: rgb(0,0,0);
     font-weight: 600;
     padding: 0.4rem 0.7rem 0.3rem 0.7rem;
     border-top-right-radius: 1rem;
@@ -39,7 +39,7 @@
     outline-offset: -1px;
     border-radius: 1rem;
     overflow: hidden;
-    filter: saturate(0);
+    filter: saturate(1);
     transition: 500ms;
   }
   
