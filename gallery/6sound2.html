@@ -1,0 +1,162 @@
+<html>
+  <head>
+    <title>Keybaord</title>
+    <style>
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.js"></script>
+    <script>
+
+        let x,y;
+        var changeDirection;
+        var sound;
+        let isHovering = [false, false, false];
+ 
+        function preload()
+        {
+        // initialize sound
+        sound = loadSound('OceanSounds.mp3');
+        }
+
+        function setup() {
+        createCanvas(windowWidth,windowHeight);
+        background(255);
+        x= 0;
+        y= 300;
+        changeDirection = false;
+        circle1=[80+(windowWidth/2-windowWidth/4),180+( windowHeight/4)];
+        circle2=[480+(windowWidth/2-windowWidth/4),380+( windowHeight/4)];
+        circle3=[580+(windowWidth/2-windowWidth/4),130+( windowHeight/4)];
+        }
+
+        function draw() {
+        noStroke();
+        fill(173, 216, 230);
+        rect(0, 0, windowWidth, windowHeight);
+        stroke(150, 75, 0);
+        fill(150, 75, 0);
+        rocks();
+        translate(mouseX-400,mouseY-300);
+        arms(-11, 40, 5.5);
+        arms(11, 40, -5.5);
+        arms(13, -40, 5);
+        arms(-13, -40, -5);
+        head();
+        translate(400,300);
+        fill(210,248,210);
+        circle(0, 0, 65);
+        hexagon(0, 0, 1);
+        hexagon(20, 12.5, 1);
+        hexagon(20, -12.5, 1);
+        hexagon(0, -24.5, 1);
+        hexagon(-20, -12.5, 1);
+        hexagon(-20, 12.5, 1);
+        hexagon(00, 24.5, 1);
+        stroke(70, 120, 65);
+        strokeWeight(4.2);
+        noFill();
+        circle(0, 0, 67);
+        if (isHovering[0]) {
+            playMusic();
+        } else if (isHovering[1]) {
+            playMusic();
+        } else if (isHovering[2]) {
+            playMusic();
+        } else {
+            stopMusic();
+        }
+        
+        }
+
+        function playMusic() {
+            sound.play();
+        }
+
+        function stopMusic() {
+            sound.stop();
+        }
+
+        function rocks() {
+            translate(windowWidth/2-windowWidth/4, windowHeight/4);
+            arc(80, 180, 80, 80, 2.9,0, CHORD);
+            arc(480, 380, 80, 80, 3.3,0, CHORD);
+            //circle2=(480, 380);
+            arc(580, 130, 80, 80, 3,0, CHORD);
+            //circle3=(580,130);
+            translate(-(windowWidth/2-windowWidth/4), -windowHeight/4);
+            let d = dist(mouseX, mouseY, circle1[0], circle1[1]);
+            if (d<= 80) {
+                isHovering[0]=true;
+            } else{
+                isHovering[0]=false;
+            }
+            let d2 = dist(mouseX, mouseY, circle2[0], circle2[1]);
+            if (d2 <= 80) {
+                isHovering[1]=true;
+            } else{
+                isHovering[1]=false;
+            }
+            let d3 = dist(mouseX, mouseY, circle3[0], circle3[1]);
+            if (d3 <= 80) {
+                isHovering[2]=true;
+            } else{
+                isHovering[2]=false;
+            }
+        }
+
+
+        function arms(transX, transY, s) {
+        stroke(35, 120, 65);
+        strokeWeight(2);
+        fill(180,251,152);
+        push();
+        translate(+400,+300);
+        rotate(PI/s);
+        ellipse(transX, transY, 15, 30);
+        pop();
+
+        }
+
+        function randomxy() {
+        let x = random(-180, 180);
+        let y = random(-180, 180);
+        translate(x,y);
+        }
+
+        function head() {
+        stroke(35, 120, 65);
+        strokeWeight(2);
+        fill(180,251,152);
+        push();
+        ellipse(400, 255, 30, 40);
+        circle(405, 245, 2);
+        circle(395, 245, 2);
+        pop();
+        }
+
+        function hexagon(transX, transY, s) {
+        stroke(35, 120, 65);
+        strokeWeight(2);
+        fill(180,251,152);
+        push();
+        translate(transX, transY);
+        scale(s);
+        beginShape();
+            vertex(-5, -10);
+            vertex(5, -10);
+            vertex(11, 0);
+            vertex(5, 10);
+            vertex(-5, 10);
+            vertex(-11, 0);
+            endShape(CLOSE); 
+            pop();
+        }
+    </script>
+  </head>
+</html>

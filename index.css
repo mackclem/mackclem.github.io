@@ -21,8 +21,9 @@
     margin-right: auto;
     display: flex;
     flex-wrap: nowrap;
-    width: 80%;
+    width: 90%;
     gap: 12px;
+    flex-wrap: wrap;
   }
   
   body {
@@ -36,4 +37,5 @@
     width: 80%;
     margin-top: 5rem;
     margin: auto;
+    flex-wrap: wrap;
   }

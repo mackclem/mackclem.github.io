@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>Keybaord</title>
+    <style>
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.js"></script>
+    <script>
+        var sound;
+ 
+        function preload()
+        {
+        // initialize sound
+        sound = loadSound('OceanSounds.mp3');
+        }
+        
+        
+        function setup() 
+        {
+        createCanvas(windowWidth, windowHeight);
+        
+        // display instructions
+        textAlign(CENTER);
+        fill(100);
+        noStroke();
+        text("Click to play sound", windowWidth/2, windowHeight/2);
+        }
+        
+        
+        function mousePressed() {
+            if (sound.isPlaying()) {
+                // .isPlaying() returns a boolean
+                sound.stop();
+                background(150, 75, 0);
+            } else {
+                sound.play();
+                background(43, 101, 236);
+            }
+        }
+    </script>
+  </head>
+</html>
