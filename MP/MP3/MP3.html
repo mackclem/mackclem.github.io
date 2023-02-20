@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./MP1.css" />
+  </head>
+  <body>
+    <div class="MP3-container">
+      <h1>MP3</h1>
+      <p class="intro-paragraph">
+        <h2>Overview</h2>
+        The goal for this project was to have a create a game where the player is the turtle that I created in the last
+        project and it has to avoid the sharks and eat the plants. If the turtle touches the sharks the player loses the 
+        game. The player has to collect all 10 plants to win the game. Link to game: 
+        https://mackclem.github.io/game/ 
+      </p>
+      <img class="picture" src="Game.gif" >
+      <p class="development">
+        <h2>Development</h2>
+        My first step in development was to figure out all of the npm installation and install p5.play through the terminal. 
+        I followed the instructions from the class example and had no problem getting it up and running. Then, I used one of 
+        the p5.play sites that I will give kudos to below and found a coin collecting game that I could adapt to fit my goals. 
+        I figured out how to make both "good coins" and "bad coins" or plants and sharks. Touching a certain type would have a 
+        certain outcome of dying or increasing the score. Next, I had to figure out how to get in images for the player sprite and 
+        all of the coins. I spent a while trying to figure out how to draw the sprite, but realized that you just have to use 
+        an image file to get them into different shapes. Finally, I was able to figure out how to make the plants disappear on 
+        a click rather than a hover. I rolled everything up and tried to get it up on gh pages. That's when everything went wrong. 
+        I'll go into more detail in the "Issue" section, but I had outdated links in my html and my rollup wasn't working properly. 
+        I had to go back through everything, update it to the current syntax, and get the rollup to work. I ended up having to 
+        modify my game to eat the plants on the hover because no matter what, the mouse clicking was not working. Overall, 
+        I was super happy with the result and it is a fun game to play.
+      <img class="picture" src="progress.png" >
+      <p class="issue">
+        <h2>Issue</h2>
+        I thought I got through this project without any issues until I tried to get it up onto gh pages. Suddenly, there was a 
+        blank screen and nothing was working. In hindsight, it could have been resolved by just fixing the rollup code to include 
+        "treeshake," but I also had an outdated p5.play version in my html and the syntax was depending on that version. Hannah 
+        helped me through updating the links and the syntax of my site and it finally was appearing, it just wasn't working 
+        right. The click function would not work and there aren't many examples out there that only do something when you click a 
+        certain area. After trying every single suggestion and trick out there, I decided it was okay to have the turtle eat the 
+        plant just by hovering and it still was a fun game. Even though I wish I could have figured this out, after 7 hours of trying 
+        everything, it wasn't worth it anymore.
+      </p>
+      <h2>Ideas and Future</h2>
+      <ul class="Ideas and Future">
+        <li>Make the plant disappear on the click</li>
+        <li>Add in levels with a certain number of sharks </li>
+        <li>Add a replay button after the game is over</li>
+      </ul>
+      <p class="kudos">
+        <h2>Kudos</h2>
+        Shout out to Hannah for staying almost an hour after class to help me fix all of my broken code and Prerna for helping 
+        me in the beginning stages of installation. Also shout out to this page for being the base of my game and giving me a 
+        good template to build off of. https://creative-coding.decontextualize.com/making-games-with-p5-play/ 
+    </div>
+  </body>
+</html>
