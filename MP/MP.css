@@ -19,6 +19,7 @@
     width: 90%;
     gap: 12px;
     flex-wrap: wrap;
+    object-fit: contain;
   }
   
   body {
