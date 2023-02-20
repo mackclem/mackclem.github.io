@@ -1,9 +1,9 @@
 .picture {
-    width: 300px;
+    height: 300px;
     border: 1px solid rgb(253, 192, 192);
     border-radius: 5px;
     cursor: pointer;
-    object-fit: cover;
+    object-fit: contain;
     aspect-ratio: 1;
   }
   
@@ -16,8 +16,9 @@
     margin-right: auto;
     display: flex;
     flex-wrap: nowrap;
-    width: 80%;
+    width: 90%;
     gap: 12px;
+    flex-wrap: wrap;
   }
   
   body {
@@ -31,4 +32,5 @@
     width: 80%;
     margin-top: 5rem;
     margin: auto;
+    flex-wrap: wrap;
   }
