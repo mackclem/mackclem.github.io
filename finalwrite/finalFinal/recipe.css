@@ -1,0 +1,41 @@
+.picture {
+  width: 300px;
+  border: 1px solid rgb(253, 192, 192);
+  border-radius: 5px;
+  cursor: pointer;
+  object-fit: cover;
+  aspect-ratio: 1;
+  transition: width 2s, height 2s, background-color 2s, rotate 2s, transform 1s;
+}
+
+.picture:hover {
+  filter: brightness(80%);
+  background-color: #ffcccc;
+  width: 300px;
+  height: 300px;
+  rotate: 360deg;
+}
+
+.picture-container {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 90%;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+body {
+  text-align: left;
+  background-color: rgb(249, 229, 229);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(61, 57, 57);
+}
+
+.page-container {
+  width: 80%;
+  margin-top: 5rem;
+  margin: auto;
+  flex-wrap: wrap;
+}
