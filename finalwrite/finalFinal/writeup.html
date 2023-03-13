@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="MP2-container">
-        <h1>Prototype</h1>
+        <h1>Final</h1>
         <a href="https://mackclem.github.io/finalproject438/">Perfect Night-In Generator</a>
         <p class="intro-paragraph">
           <h2>Overview</h2>
@@ -19,51 +19,39 @@
           requests. Right now the site is using chocolate as the ingredient to be incorporated, vodka as the alcohol, and the movie
           genre is drama. I was hoping to advance my prototype to take in user input and output a nicely formatted generator.
         </p>
-        <img class="gif" src="progress.gif" alt="Gif of a Perfect Night In Generator">
-        <p class="scope">
-            <h2>Project Scope</h2>
-            My project scope has stayed pretty similar now that i have began working on it. I was hoping to maybe 
-            have the recipes printed out on the page originally but after seeing the large range of formats they can 
-            come in, I have decided to just provide a link instead. 
-        </p>
-        <p class="scope">
-        <h2>Time Management</h2>
-            The prototype took me right around the time I thought it would. It was very helpful to start it early on 
-            Monday and get my bearings with APIs. Also, starting on Monday meant I could go to Hannah's office hours with initial 
-            questions that would have kept me from getting any further on the project. I expect the final iteration to 
-            be a similar time commitment.
-        </p>
-        <p class="scope">
-        <h2>Implementation Plan</h2>
-            My implementation plan has stayed the same. I plan to continue with figuring out how to get input values 
-            from the user and use those to call the API. I need to figure out how to make drop-down menus and how 
-            to use that information wit the API. I also expect that I will have to deal with errors from input so 
-            I also need to brainstorm how I plan on handling that.
-        </p>
+        <img class="gif" src="final.gif" alt="Gif of a Perfect Night In Generator">
         <p class="development">
           <h2>Development</h2>
-           
+           After I turned in my prototype, I went to work on putting the information in based on user input. I was able to find some 
+           resources that helped with dropdown menus and was able to get my code to return the inforamtion that the user put in. However, 
+           I was using 3 different js codes, one for each API and this was difficult to work with when using the drop down menus. I will 
+           go more in-depth into this process in the "issue" section. Once I was able to get the APIs into one js file, the program was running 
+           smoothly. Then, I knew I wanted to type in an ingredient instead of choosing from a limited list. I put in a text field and realized 
+           that it would have to be able to handle errors from user input. I created an if statement to handle this and tell the user 
+           to try a different ingredient. Next, I wanted to create a mocktail option for the drinks. With an if statement, I allow user 
+           to recieve a link to mocktails if that is what they choose. Finally, I cleaned up the CSS, added in a background image and 
+           made the text readable on the image. After pushing it all to gh pages, I was done.
         </p>
-        <img class="picture" src="Inprogress.png" alt="Generator with only food working">
+        <img class="picture" src="InProgress.png" alt="Prototype">
         
         <p class="issue">
           <h2>Issue</h2>
-          The main issue I had was retrieving the values that were inside the json dictionary. I remembered doing it in 310, but I wasn't 
-          sure how to do it in js and was getting confused between the array and the dictionary. I was able to hop on to office hours with Hannah 
-          where she helped me get the information which uses periods in between the categories you want to get into. I was also having trouble 
-          sending the information back to my html, but she helped me with the render function. Everything thus far has gone suprisingly 
-          smoothly, and I don't doubt I will have issues coming up as I complete this project.
+          The main issue I had was trying to access 3 different js files to make the APIs run. After talking with Hannah, the best way 
+          to approach this was too put all the code into one file and use an event listener to wait for the generator button to be pushed. 
+          I added in functions for each API and had them called when the button was pushed. Figuring out how to handle errors was also 
+          difficult because some the the API's weren't built for that. I also tried for a while to create a reroll button but it messed 
+          with my whole code so I decided to skip that. 
         </p>
         <h2>Ideas and Future</h2>
         <ul class="Ideas and Future">
-          <li>Add section to recieve input from the user</li>
-          <li>Make the css different from Hannah's and more catered to my site</li>
-          <li>Make the links in the boxes clickable to the recipes</li>
+          <li>Add a "reroll" button for the individual sections</li>
+          <li>Add an optional "get an excuse" button to get out of other plans</li>
+          <li>Make the movie section lead to a place to watch the movie</li>
         </ul>
         <p class="kudos">
           <h2>Kudos</h2>
           Shout out to to rapid API for having great documentation on each API and how to sign up for them. Also shout out Hannah for 
-          helping me on js basics that I haven't grasped yet. 
+          helping me on js basics that I haven't grasped yet and helping me figure out the input section.
         </p>
       </div>
   </body>
